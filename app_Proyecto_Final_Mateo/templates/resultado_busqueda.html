@@ -1,0 +1,24 @@
+{% extends 'inicio.html' %}
+
+
+{% block contenidoquecambia %}
+
+   
+   {% if productos %}
+        
+        <p>Estos son los productos de la marca {{marca}}</p>
+    
+        <ul>
+            {% for producto in productos %}
+
+                <li>
+                    {{producto}}
+                </li>
+
+            {% endfor %}
+        </ul>   
+    {% else %} 
+        <p>No se encontraron productos de la marca {{marca}}</p>
+    {% endif %}
+        
+{% endblock contenidoquecambia %}

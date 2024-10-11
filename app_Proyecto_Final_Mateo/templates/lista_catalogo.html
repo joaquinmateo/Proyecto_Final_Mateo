@@ -1,0 +1,21 @@
+{% extends 'Inicio.html' %}
+
+
+{% block contenidoquecambia %}
+
+    <h1>En nuestro catalogo contamos con:</h1>
+    <ul>
+        
+        {% for catalogo in catalogos %}
+            <li>
+                <a href="{% url 'DetalleCatalogo' catalogo.id %}">
+                {{catalogo}}
+                </a>
+            </li>
+        {% endfor %}
+            
+    </ul>
+
+{% endblock contenidoquecambia %}
+
+
