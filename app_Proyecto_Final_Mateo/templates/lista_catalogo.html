@@ -1,6 +1,5 @@
 {% extends 'Inicio.html' %}
 
-
 {% block contenidoquecambia %}
 
     <h1>En nuestro catalogo contamos con:</h1>
@@ -9,7 +8,7 @@
         {% for catalogo in catalogos %}
             <li>
                 <a href="{% url 'DetalleCatalogo' catalogo.id %}">
-                {{catalogo}}
+                    <h2>{{ catalogo.marca }} <br> {{catalogo.producto}}</h2>
                 </a>
             </li>
         {% endfor %}
@@ -17,5 +16,7 @@
     </ul>
 
 {% endblock contenidoquecambia %}
+
+
 
 

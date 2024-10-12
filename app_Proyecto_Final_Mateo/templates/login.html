@@ -3,6 +3,8 @@
 
 {% block contenidoquecambia1 %}
 
+    <h1>Ingrese sus datos para acceder:</h1>
+
     <form action ="{% url 'Login' %}" method="post">{% csrf_token %}
         
         {{mi_formulario.as_p}}

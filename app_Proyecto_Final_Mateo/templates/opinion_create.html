@@ -3,6 +3,9 @@
 
 {% block contenidoquecambia %}
 
+    <h1>Ingrese su mail y consulta:</h1>
+    <br>
+
     <form action ="{% url 'CreaOpinion' %}" method="post">{% csrf_token %}
         
         {{mi_formulario.as_p}}

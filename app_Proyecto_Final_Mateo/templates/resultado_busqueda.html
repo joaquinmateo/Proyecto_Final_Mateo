@@ -12,7 +12,9 @@
             {% for producto in productos %}
 
                 <li>
-                    {{producto}}
+                    <a href="{% url 'DetalleCatalogo' producto.id %}"></a>
+                        <h2>{{ producto.marca }} <br> {{producto.producto}}</h2>
+                    </a>
                 </li>
 
             {% endfor %}

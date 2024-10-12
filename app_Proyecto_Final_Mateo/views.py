@@ -16,7 +16,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 def padre(req):
     return render(req, "padre.html", {})
 
-@login_required
+
 def inicio(req):
 
     return render(req, "inicio.html", {})
@@ -31,12 +31,12 @@ class CatalogoDetail(LoginRequiredMixin, DetailView):
     template_name = 'detalle_catalogo.html'
     context_object_name = 'catalogo'
 
-@login_required
+
 def busqueda_producto(req):
 
     return render(req, "pedir.html", {})
 
-@login_required
+
 def buscar_producto(req):
 
     nom_marca = req.GET["marca"]
@@ -104,7 +104,6 @@ def register(req):
         return render(req, "registro.html", { "mi_formulario": mi_formulario }) 
     
       
-@login_required
 def editar_perfil(req):
     
     usuario = req.user
@@ -131,8 +130,7 @@ def editar_perfil(req):
             mi_formulario = UserEditForm()
             return render(req, "editar_perfil.html", {"mi_formulario": mi_formulario}) 
     
-
-@login_required       
+      
 def crea_opinion(req):
 
     if req.method == 'POST':
@@ -154,6 +152,11 @@ def crea_opinion(req):
 
         mi_formulario = OpinionFormulario()
         return render(req, "opinion_create.html", { "mi_formulario": mi_formulario})
-    
+   
+def acerca_mio(req):
+    if req.method == 'GET':
+        return render(req, 'acerca_mio.html')
+    else:
+        return render(req, 'acerca_mio.html')
 
 # Create your views here.

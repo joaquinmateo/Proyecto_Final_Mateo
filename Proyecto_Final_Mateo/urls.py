@@ -18,9 +18,13 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-from app_Proyecto_Final_Mateo.views import inicio
+from app_Proyecto_Final_Mateo.views import *
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('app_Proyecto_Final_Mateo/', include('app_Proyecto_Final_Mateo.urls')),
-]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
