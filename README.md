@@ -19,3 +19,9 @@ python manage.py runserver
 8. En Acerca de mi tendrás un resumen de mi persona junto con una imagen mía
 
 9. En Editar perfil podrás actualizar tus datos de usuario, Cerrar Sesión y volver a Iniciar pero ahora con los datos actualizados
+
+Link de los casos de prueba:
+https://docs.google.com/spreadsheets/d/1zb3_eUl4jtSskzrTGN5weWbcZsA9No-MFCS16Mh2884/edit?usp=sharing
+
+Link al video de Youtube:
+https://youtu.be/qTs6i_h6oj8
